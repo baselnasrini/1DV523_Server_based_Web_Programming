@@ -1,0 +1,39 @@
+{
+  "name": "mn223dn-examination-3",
+  "version": "1.0.0",
+  "description": "Assign 3 of server-based web programming course",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemon --inspect app.js",
+    "lint": "npx eslint . || exit 0",
+    "lint:fix": "npx eslint . --fix || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv523/mn223dn-examination-3.git"
+  },
+  "author": "Mohammed Basel Nasrini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1dv523/mn223dn-examination-3/issues"
+  },
+  "homepage": "https://github.com/1dv523/mn223dn-examination-3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "express-session": "^1.17.0",
+    "octonode": "^0.9.5",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.3",
+    "standard": "^14.3.3"
+  }
+}

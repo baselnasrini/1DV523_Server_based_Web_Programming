@@ -1,0 +1,14 @@
+<div class="bg-light text-danger vh-100">
+     <div class="container py-5">
+          <div class="row">
+               <div class="col-md-2 text-center">
+                    <p><i class="fas fa-bug fa-5x"></i><br/><br/>Internal Server Error<br/>Status Code: 500</p>
+               </div>
+               <div class="col-md-10">
+                    <h3>OPPSSS!!!! {{#if error}} {{error.message}} {{else}} Internal Server Error {{/if}}</h3>
+                    <p>The server encountered an internal error and was unable to complete your request.<br/>Please go back to the homepage to continue browsing.</p>
+                    <a class="btn btn-danger" href="javascript:window.location.replace('/')">Go To Homepage</a>
+               </div>
+          </div>
+     </div>
+</div>

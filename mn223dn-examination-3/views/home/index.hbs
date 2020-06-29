@@ -1,0 +1,109 @@
+ {{#if context}}
+    <h3 id="title">Opened issues in the repository :</h3>
+        {{else}}
+    <h3 id="title">No opened issues in the repository</h3>
+{{/if}}
+<div class="container-fluid">
+    <div class="float-left w-50" id="issues-container">
+        {{#if context}}
+            {{#each context}}
+                    <div class="card mb-2">
+                        <div class="card-header p-1 pl-2">
+                            <h5 class="text-info">{{this.title}}</h5>
+                            <small class="text-muted">By: {{this.user}}</small>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{this.body}}</p>
+                        </div>
+                        <div class="card-footer pl-2">
+                            {{#each this.comments}}
+                               <div class="card mb-3" style="max-width: 650px;">
+                                <div class="row no-gutters">
+                                    <div class="col-sm-auto p-1">
+                                    <img src="{{this.userImage}}" class="card-img" style="width: 75px; height: 75px;">
+                                    </div>
+                                    <div class="col-md-10">
+                                    <div class="card-body p-2">
+                                        <p class="card-text">{{this.body}}</p>
+                                        <small class="text-muted">By: {{this.user}}</small>
+                                        <br>
+                                       <small class="text-muted">Last updated on: {{this.updatedAt}}</small>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                            {{/each}}
+                            <div class="row justify-content-between">
+                                <div class="col-8">
+                                    <p class="mb-0">
+                                        <small class="text-muted">Created by: {{this.createdAt}}</small>
+                                        <br>
+                                        <small class="text-muted">Last updated on: {{this.updatedAt}}</small>
+                                    </p>
+                                </div>
+                                <div class="col-3 align-self-end p-1">
+                                    <a href="{{this.link}}" class="btn btn-primary btn-sm float-right" target="_blank">Link to Github</a>
+                                    <button type="button" class="btn btn-sm btn-danger float-right mr-2 {{this.number}}" id="btnCloseIssue">Close Issue</button>
+                                </div>
+                            </div> 
+                        </div> 
+                    </div>
+            {{/each}}
+        {{/if}}
+        <template id="issue-temp">
+            <div class="card mb-2" id="issueCard">
+                <div class="card-header p-1 pl-2">
+                    <h5 id="issueTitle" class="text-info"></h5>
+                    <small class="text-muted" id="issueUsername"></small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text" id="issueBody"></p>
+                </div>
+                <div class="card-footer pl-2">
+                    <div id="commentsContainer"></div>
+                    <div class="row justify-content-between">
+                        <div class="col-8">
+                            <p class="mb-0">
+                                <small class="text-muted" id="issueCreatedAt"></small>
+                                <br>
+                                <small class="text-muted" id="issueUpdatedAt"></small>
+                            </p>
+                        </div>
+                        <div class="col-3 align-self-end p-1">
+                            <a id="issueLink" href="" class="btn btn-primary btn-sm float-right" target="_blank">Link to Github</a>
+                            <button type="button" class="btn btn-sm btn-danger float-right mr-2" number="" id="btnCloseIssue">Close Issue</button>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </template>
+        <template id="comment-temp">
+            <div class="card mb-3" style="max-width: 650px;">
+                <div class="row no-gutters" id="commentCard">
+                    <div class="col-sm-auto p-1">
+                        <img id="commentImg" src="" class="card-img" style="width: 75px; height: 75px;">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body p-2">
+                            <p class="card-text" id="commentBody"></p>
+                            <small class="text-muted" id="commentUser"></small>
+                            <br>
+                            <small class="text-muted" id="commentUpdatedAt"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <div class="float-right w-25" id="notification-container">
+        <h3 id="noti-label">Notifications :</h3>
+        <template id="noti-temp">
+            <div class="card mb-2" id="notification-div">
+                <div class="card-body" id="noti-body"> </div>
+            </div>
+        </template>
+    </div>
+
+</div>

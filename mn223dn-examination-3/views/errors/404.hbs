@@ -1,0 +1,18 @@
+<div class="bg-light text-danger vh-100">
+     <div class="container py-5">
+          <div class="row">
+               <div class="col-md-2 text-center">
+                    <p><i class="fas fa-exclamation-triangle fa-5x"></i><br/><br/>File Not Found<br/>Status Code: 404</p>
+               </div>
+               <div class="col-md-10">
+                    <h3>OPPSSS!!!! File Not Found</h3>
+                    <p>Sorry, but the page you were trying to reach does not exist.<br/>Please go back to the homepage to continue browsing.</p>
+                     {{#if back}}
+                          <a class="btn btn-danger" href="javascript:history.back()">Go Back to snippets</a>
+                     {{else}}
+                          <a class="btn btn-danger" href="javascript:window.location.replace('/')" >Go To Homepage</a>
+                     {{/if}}
+               </div>
+          </div>
+     </div>
+</div>
