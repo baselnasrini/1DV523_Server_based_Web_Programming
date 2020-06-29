@@ -1,0 +1,54 @@
+{
+  "name": "mn223dn-examination-2",
+  "version": "1.0.0",
+  "description": "A snippets application with full CRUD functionality",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devstart": "nodemon --inspect app.js",
+    "lint": "npx eslint . || exit 0",
+    "lint:fix": "npx eslint . --fix || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv523/mn223dn-examination-2.git"
+  },
+  "author": "Mohammed Basel Nasrini <mn223dn@student.lnu.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1dv523/mn223dn-examination-2/issues"
+  },
+  "homepage": "https://github.com/1dv523/mn223dn-examination-2#readme",
+  "dependencies": {
+    "@lnu/eslint-config": "^1.0.6",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.4",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-hbs": "^2.3.1",
+    "express-http-to-https": "^1.1.4",
+    "express-session": "^1.17.0",
+    "http-errors": "^1.7.3",
+    "install-peerdeps": "^2.0.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "eslintConfig": {
+    "extends": "@lnu"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsdoc": "^21.0.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,hbs,html,css"
+  }
+}
